@@ -1,0 +1,126 @@
+/* Variables */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* Paragraphs */
+  --very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons */
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Card styles */
+main {
+  padding: 1rem;
+}
+.columns-card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.columns-card article {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 325px;
+  height: auto;
+  padding: 3rem;
+  gap: 2rem;
+}
+
+.columns-card article:nth-child(1) {
+  background-color: var(--bright-orange);
+}
+
+.columns-card article:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+.columns-card article:nth-child(3) {
+  background-color: var(--very-dark-cyan);
+}
+
+.columns-card * {
+  margin: 0;
+}
+.columns-card h1 {
+  color: var(--very-light-gray);
+  font-size: 3rem;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.columns-card p {
+  line-height: 1.9rem;
+  color: var(--transparent-white);
+}
+
+.columns-card button {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  border: thick solid var(--very-light-gray);
+  border-radius: 2rem;
+}
+
+.first-button {
+  color: var(--bright-orange);
+}
+.second-button {
+  color: var(--dark-cyan);
+}
+.third-button {
+  color: var(--very-dark-cyan);
+}
+
+.card-button:hover {
+  background-color: transparent;
+  color: var(--transparent-white);
+}
+
+@media screen and (min-width: 376px) {
+  .columns-card article {
+    max-width: 300px;
+  }
+} /* Footer */
+.attribution {
+  align-self: center;
+  width: 100%;
+  color: var(--soft-blue);
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.attribution p {
+  margin: 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
